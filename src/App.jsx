@@ -1,17 +1,16 @@
-import Login from "./components/Login/login"
-import Register from './components/Login/Register'
-import { useState } from 'react'
+import Login from "./components/Login"
+import Register from "./components/Register"
+import { useState } from "react"
 
 const App = () => {
 
-  const [Toggle, setToggle] = useState(0)
+  const [toggle, setToggle] = useState(false)
 
   return (
-
     <div id="main-container">
-
-      {Toggle === 0 ? <Login fn={setToggle} /> : <Register fn={setToggle} />}
-
+      {!toggle
+        ? <Login fn={setToggle} />
+        : <Register fn={setToggle} />}
     </div>
   )
 }

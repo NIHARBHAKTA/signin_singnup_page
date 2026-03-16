@@ -12,53 +12,54 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.849);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#main-container{
-    width: 23%;
+/* MAIN CARD */
+#main-container {
+    width: 400px;
+    max-width: 90%;
     padding: 40px;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-
-#form{
+/* FORM */
+#form {
     display: flex;
     flex-direction: column;
 }
 
-#text-container{
+#text-container {
     text-align: center;
 }
 
-#createaccount{
+#createaccount {
     font-size: 30px;
     font-weight: bold;
 }
 
-label{
+label {
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 5px;
-    font-weight:500;
+    font-weight: 500;
     color: rgba(0, 0, 0, 0.685);
-
 }
 
-input{
+input {
     border-radius: 15px;
     padding: 10px 20px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.199);
     background-color: rgba(223, 223, 223, 0.103);
+    width: 100%;
 }
 
-button{
+button {
     background-color: black;
     color: white;
     padding: 11px 20px;
@@ -66,21 +67,21 @@ button{
     border-radius: 12px;
     margin-top: 23px;
     font-weight: bolder;
-
+    width: 100%;
 }
 
-#signin{
+#signin {
     font-size: 15px;
     text-align: center;
     margin: 20px 0px;
 }
 
-h4{
+h4 {
     font-size: 15px;
     color: rgba(0, 0, 0, 0.74);
 }
 
-#sig{
+#sig {
     color: black;
     font-weight: 700;
     text-decoration: underline;
@@ -88,16 +89,42 @@ h4{
     margin-left: 5px;
 }
 
-
+/* placeholders */
 input[type="password"]::placeholder {
-  font-size: 28px;
-  color: rgba(0, 0, 0, 0.452);
-  
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.452);
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.452);
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.452);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    #main-container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #createaccount {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input {
+        padding: 9px 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
 }
